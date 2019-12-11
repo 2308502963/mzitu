@@ -1,0 +1,20 @@
+#统计列表中个元素的个数
+ls=["综合","综合","综合","综合","综合","理工","师范","农林","民族","军事",\
+    "理工","师范","理工","师范","理工","农林","民族","民族","军事","军事","军事","军事","军事",\
+    "军事","军事","军事","军事","军事","军事","军事","综合"]
+'''
+geshu=set(ls)
+print(geshu)
+'''
+countzh=ls.count("综合")
+countlg=ls.count("理工")
+countsf=ls.count("师范")
+countnl=ls.count("农林")
+countmz=ls.count("民族")
+countjs=ls.count("军事")
+print("综合：%d"%countzh)
+print("理工：%d"%countlg)
+print("师范：%d"%countsf)
+print("农林：%d"%countnl)
+print("民族：%d"%countmz)
+print("军事：%d"%countjs)
