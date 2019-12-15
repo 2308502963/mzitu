@@ -6,12 +6,8 @@
 # @Software: PyCharm
 
 import requests
-import os
 from bs4 import BeautifulSoup
 import os
-from io import BytesIO
-import time
-from PIL import Image
 
 def update_header(referer):
     headers['Referer'] = '{}'.format(referer)

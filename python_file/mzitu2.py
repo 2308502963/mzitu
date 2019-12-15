@@ -26,7 +26,7 @@ Picreferer = {
 start_html = requests.get(all_url,headers = Hostreferer)
 
 # 爬取图片的保存地址
-path = 'E:\\18jin\\'
+path = 'E:\\python爬虫图片\\'
  
 #找寻最大页数
 soup = BeautifulSoup(start_html.text, "html.parser")
