@@ -26,7 +26,7 @@ Picreferer = {
 start_html = requests.get(all_url,headers = Hostreferer)
 
 # 爬取图片的保存地址
-path = 'E:\\python爬虫图片\\'
+path = 'D:\\python爬虫\\'
  
 #找寻最大页数
 soup = BeautifulSoup(start_html.text, "html.parser")
@@ -45,10 +45,10 @@ for n in range(1, int(max_page)+1):
     for a in all_a:
         title = a.get_text()    #提取文本
         if(title != ''):
-            # print("准备扒取："+title)
+            print("准备扒取："+title)
             # win不能创建带？的目录
             if(os.path.exists(path+title.strip().replace('?',''))):
-                    # print('目录已存在')
+                    print('目录已存在')
                     flag = 1
             else:
                 os.makedirs(path+title.strip().replace('?', ''))
@@ -72,13 +72,13 @@ for n in range(1, int(max_page)+1):
                 mess = BeautifulSoup(html.text,"html.parser")
                 pic_url = mess.find('img', alt = title)
                 # print(num)
-                print(pic_url['src'])
+                print("开始下载:", pic_url['src'])
 #                 #exit(0)
-                html = requests.get(pic_url['src'],headers = Picreferer)
+                html = requests.get(pic_url['src'], headers = Picreferer)
                 file_name = pic_url['src'].split(r'/')[-1]
 
                 # 保存结果
-                f = open(file_name,'wb')
+                f = open(file_name, 'wb')
                 f.write(html.content)
                 f.close()
             print('完成')

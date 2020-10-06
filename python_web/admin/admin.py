@@ -22,7 +22,7 @@ env = Environment(
 
     
 
-#网页渲染
+# 网页渲染
 def template(tpl, **kwargs):
     templater = env.get_template(tpl)
     return html(templater.render(kwargs))
@@ -33,7 +33,7 @@ def MD5(src):
     md5.update(src)   
     return md5.hexdigest()
 #登录
-@admin.route('/login',methods=['GET', 'POST']) #/<phone>/<password>
+@admin.route('/login', methods=['GET', 'POST']) #/<phone>/<password>
 async def login(request):    
     print('/admin/login')
     if request.method == 'GET':

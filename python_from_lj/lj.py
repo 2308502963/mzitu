@@ -37,7 +37,7 @@ def save_stu():  #保存用户信息到文件
     with open("stu_information.txt","w",encoding="utf-8") as f:
         f.write(student)
         #print("保存成功！文件位置在"+os.getcwd())
-def recover_data():  #恢复数据
+def recover_data():  # 恢复数据
     global stu_info
     try:
         with open("stu_information.txt","r",encoding="utf-8")as f:
@@ -51,7 +51,7 @@ def print_all_info():    #显示全部学生成绩信息
     print("姓名\t\t\t学号\t\t\t\t语文成绩\t\t\t数学成绩\t\t\t\t英语成绩\t\t\t")
     for i in range(0, len(stu_info)):
         # print_kwargs(**user_card[i])
-        print("{:<16}{:<16}{:<16}{:<16}{:<16}".format(stu_info[i]['姓名'], stu_info[i]['学号'],stu_info[i]['语文'], stu_info[i]['数学'],                                                            stu_info[i]['英语'],))
+        print("{:<16}{:<16}{:<16}{:<16}{:<16}".format(stu_info[i]['姓名'], stu_info[i]['学号'],stu_info[i]['语文'], stu_info[i]['数学'], stu_info[i]['英语'],))
 def find():  #查询学生成绩
     find_stu_name = input("请输入您要查找的用户的姓名：")
     find_num = 0

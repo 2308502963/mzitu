@@ -1,4 +1,4 @@
-#爬取京東商品頁面
+
 import requests
 url="https://item.jd.com/8535863.html"
 r=requests.get(url)
