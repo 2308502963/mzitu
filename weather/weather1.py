@@ -12,8 +12,6 @@ import json
 url = "https://v0.yiketianqi.com/api?version=v61&appid=38624114&appsecret=P1SBInud"
 
 def getWeather1():
-
-
     json1 = requests.get(url).text
     # print(json.text)
 
@@ -27,13 +25,13 @@ def getWeather1():
     # print(w_dict['air_tips'])
 
     jsonObj = {
-        "date":w_dict['date'],
-        "week":w_dict['week'],
-        "country":w_dict['country'],
-        "city":w_dict['city'],
-        "wea":w_dict['wea'],
-        "tem":w_dict['tem'],
-        "air_tips":w_dict['air_tips']
+        "date": w_dict['date'],
+        "week": w_dict['week'],
+        "country": w_dict['country'],
+        "city": w_dict['city'],
+        "wea": w_dict['wea'],
+        "tem": w_dict['tem'],
+        "air_tips": w_dict['air_tips']
     }
     return jsonObj
 #
